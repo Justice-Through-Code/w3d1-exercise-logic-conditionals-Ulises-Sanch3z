@@ -33,8 +33,6 @@ def stock_purchases():
         max_shares = investment / google
     elif stock_name.lower() == "microsoft":
         max_shares = investment / msft
-    else:
-        print("That stock is not available. Please choose from the provided options.")
 
     current_price = None
     if stock_name.lower() == "amazon":
@@ -50,8 +48,6 @@ def stock_purchases():
 
     if current_price is not None:
         print(f"{client} has ${investment} to invest and can buy {int(max_shares)} shares of {stock_name} at the current price of ${current_price}.")
-    else:
-        print("Current price information not available.")
     # 1.5 TODO: Once you've calculated the number of stocks that can be purchased,
     # Use an f-string to print the result for the client, ala:
     # Alex has $5000 to invest and can buy 50 shares of Apple at the current price of $100.
